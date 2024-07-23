@@ -1,0 +1,38 @@
+# Xcode
+#
+# gitignore template for Xcode projects
+#
+# User settings
+xcuserdata/
+# User-specific workspace settings
+*.xcworkspace/xcuserdata/
+# Logs
+xcuserdata/*.xcuserstate
+DerivedData/
+build/
+*.log
+# Xcode 8 and earlier
+xcdebugger/
+# Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+# Swift Package Manager
+.build/
+# Objective-C/C++ specific
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+# AppCode
+.idea/
+*.iml
+# CocoaPods
+Pods/
+# Carthage
+Carthage/Build/
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
