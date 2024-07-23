@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var image: NSImage? = nil
+    @StateObject var vm = ScreenCapViewModel()
     
     var body: some View {
         VStack {
             
-            // if image has been set (screenshot taken) show image in window
-            if let image = image {
+            ForEach(vm.images, id: \.self) { image in
                 Image(nsImage: image)
                     .resizable()
                     .scaledToFit()
@@ -23,35 +22,10 @@ struct ContentView: View {
             
             // Create a button that prompts the user to take a screenshot
             Button("Take a screenshot") {
-                
-                // Create a new process called task
-                let task = Process()
-                
-                // Point the task to an already existing macOS command line tool
-                task.executableURL = URL(fileURLWithPath: "/usr/sbin/screencapture")
-                task.arguments = ["-cw"]
-                
-                // Run the task - protect against errors
-                do {
-                    try task.run()
-                    task.waitUntilExit()
-                    getImageFromPasteboard()
-                } catch {
-                    print("could not take screenshot: \(error)")
-                }
+                vm.takeScreenshot()
             }
         }
         .padding()
-    }
-    
-    // Sets the var image to the image saved to the machine's clipboard
-    func getImageFromPasteboard() {
-     
-        guard NSPasteboard.general.canReadItem(withDataConformingToTypes: NSImage.imageTypes) else { return }
-        
-        guard let image = NSImage(pasteboard: NSPasteboard.general) else { return }
-        
-        self.image = image
     }
 }
 

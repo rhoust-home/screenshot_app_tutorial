@@ -11,6 +11,7 @@
 		C4B11C6C2C505F7C003C5554 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B11C6B2C505F7C003C5554 /* ContentView.swift */; };
 		C4B11C6E2C505F7D003C5554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B11C6D2C505F7D003C5554 /* Assets.xcassets */; };
 		C4B11C712C505F7D003C5554 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B11C702C505F7D003C5554 /* Preview Assets.xcassets */; };
+		C4B11C792C5069C1003C5554 /* ScreenCapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B11C782C5069C1003C5554 /* ScreenCapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		C4B11C6D2C505F7D003C5554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4B11C702C505F7D003C5554 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4B11C722C505F7D003C5554 /* ScreenshotApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenshotApp.entitlements; sourceTree = "<group>"; };
+		C4B11C782C5069C1003C5554 /* ScreenCapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B11C692C505F7C003C5554 /* ScreenshotAppApp.swift */,
+				C4B11C782C5069C1003C5554 /* ScreenCapViewModel.swift */,
 				C4B11C6B2C505F7C003C5554 /* ContentView.swift */,
 				C4B11C6D2C505F7D003C5554 /* Assets.xcassets */,
 				C4B11C722C505F7D003C5554 /* ScreenshotApp.entitlements */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B11C6C2C505F7C003C5554 /* ContentView.swift in Sources */,
+				C4B11C792C5069C1003C5554 /* ScreenCapViewModel.swift in Sources */,
 				C4B11C6A2C505F7C003C5554 /* ScreenshotAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
