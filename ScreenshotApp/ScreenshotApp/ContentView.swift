@@ -13,11 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            
-            ForEach(vm.images, id: \.self) { image in
-                Image(nsImage: image)
-                    .resizable()
-                    .scaledToFit()
+            // Implements auto window resizing and image grid arrangement
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 300))]) {
+                
+                ForEach(vm.images, id: \.self) { image in
+                    Image(nsImage: image)
+                        .resizable()
+                        .scaledToFit()
+                    
+                        // Allows user to drag image into other applications
+                        .onDrag({NSItemProvider(object: image)})
+                }
             }
             
             // Create a button that prompts the user to take a screenshot
