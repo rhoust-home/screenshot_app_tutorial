@@ -27,9 +27,18 @@ struct ContentView: View {
             }
             
             // Create a button that prompts the user to take a screenshot
-            Button("Take a screenshot") {
-                vm.takeScreenshot()
+            HStack {
+                Button("Portion of Screen") {
+                    vm.takeScreenshot(for: .area)
+                }
+                Button("Window") {
+                    vm.takeScreenshot(for: .window)
+                }
+                Button("Full Screen") {
+                    vm.takeScreenshot(for: .full)
+                }
             }
+            
         }
         .padding()
     }
